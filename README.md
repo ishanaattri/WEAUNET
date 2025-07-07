@@ -115,7 +115,6 @@ class WEA_UNet(nn.Module):
         self.pool1 = nn.MaxPool2d(2)
         self.enc2 = ConvBlock(64, 128)
         self.pool2 = nn.MaxPool2d(2)
-
         self.bottleneck = ConvBlock(128, 256)
 
         self.up1 = nn.ConvTranspose2d(256, 128, kernel_size=2, stride=2)
